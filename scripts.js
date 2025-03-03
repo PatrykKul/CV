@@ -142,3 +142,9 @@ new Chart(ctxSkills, {
     }
 });
 
+
+document.querySelector('.download-cv').addEventListener('click', function(event) {
+    event.preventDefault();  // Zapobiega domyślnemu działaniu linku
+    window.location.href = 'https://patrykkul.github.io/CV/cv.pdf';  // Przekierowuje do pliku PDF
+  });
+  
