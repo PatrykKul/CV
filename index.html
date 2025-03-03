@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV | Patryk Kulesza</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="header">
+        <div class="contact-links">
+            <a href="mailto:patryk27_2003@o2.pl"><i class="fas fa-envelope"></i> Email</a>    <!-- Uzupelnic linki -->
+            <a href="tel:+48662581368"><i class="fas fa-phone"></i> Telefon</a>
+            <a href="https://github.com/PatrykKul/CV"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/patryk-kulesza-788397354/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+        <button class="btn" id="theme-toggle"><i class="fas fa-moon"></i> <span>Tryb ciemny</span></button>
+        <a class="btn download-cv" href="cv.pdf" download><i class="fas fa-download"></i> Pobierz CV</a>
+    </div>
+
+    <section class="hero">
+        <div>
+            <h1>Patryk Kulesza</h1>
+            <p>Technik Informatyk</p>
+        </div>
+    </section>
+
+    <main class="main-container">
+
+        <!-- Dane osobowe -->
+        <section class="card" data-aos="fade-up" id="dane-osobowe">
+            <h2>Dane Osobowe</h2>
+            <div class="personal-info">
+                <img src="profile.jpg" alt="Patryk Kulesza" class="profile-pic">
+                <div class="contact-details">
+                    <p><i class="fas fa-envelope"></i> patryk27_2003@o2.pl</p>
+                    <p><i class="fas fa-envelope"></i> patryk27102003@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +48 662 581 368</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Białystok, Polska</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doświadczenie -->
+        <section class="card" data-aos="fade-up" id="doswiadczenie">
+            <h2>Doświadczenie</h2>
+            <ul class="timeline">
+                <li class="timeline-item" data-details="Dostawca usług internetowych, Zambrów.">
+                    <h3>Staż: TEPSANET NOWACCY Sp.J. </h3>
+                    <p>Uczestniczyłem w instalacji i konfiguracji sieci światłowodowych oraz radiowych. Wspierałem zespół techniczny w montażu infrastruktury telekomunikacyjnej, diagnozowaniu usterek i optymalizacji połączeń internetowych.</p>
+                </li>
+                <li class="timeline-item" data-details="Ambasador marki Philip Morris.">
+                    <h3>Ambasador marki - Philip Morris</h3>
+                    <p>Reprezentowanie marki i angażowanie społeczności w kampanie marketingowe.</p>
+                </li>
+                <li class="timeline-item" data-details="Brandmaster - BAT.">
+                    <h3>Brandmaster - BAT</h3>
+                    <p>Koordynacja działań marketingowych i budowanie pozytywnego wizerunku marki.</p>
+                </li>
+            </ul>
+        </section>
+        
+
+        <!-- Umiejętności -->
+        <section class="card" data-aos="fade-up" id="umiejetnosci">
+            <h2>Umiejętności</h2>
+            <div class="skills-grid">
+                <div class="skill-item"><i class="fab fa-java"></i> JAVA</div>
+                <div class="skill-item"><i class="fab fa-html5"></i> HTML</div>
+                <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
+                <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS</div>
+                <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+                <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
+                <div class="skill-item"><i class="fas fa-cogs"></i> C++</div>
+            </div>
+            <!-- Dynamiczny wykres poziomu umiejętności -->
+            <canvas id="skills-chart" class="chart"></canvas>
+        </section>
+        
+
+        <!-- Certyfikaty -->
+        <section class="card" data-aos="fade-up" id="certyfikaty">
+            <h2>Certyfikaty</h2>
+            <div class="certificates-grid">
+                <div class="cert-item">
+                    <i class="fas fa-certificate"></i>
+                    <h3>AutoCAD</h3>
+                    <p>2022</p>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Programowanie Drukarek 3D</h3>
+                    <p>2022</p>
+                </div>
+            </div>
+        </section>
+        
+
+       <!-- Języki -->
+<section class="card" data-aos="fade-up" id="jezyki">
+    <h2>Języki</h2>
+    <canvas id="language-chart"></canvas>
+</section>
+
+       <!-- Edukacja/Wykształcenie -->
+<section class="card" data-aos="fade-up" id="edukacja">
+    <h2>Edukacja/Wykształcenie</h2>
+    <div class="education-timeline">
+        <div class="education-item">
+            <h3>Uniwersytet w Białymstoku 2023 - obecnie</h3>
+            <p>Kierunek: Informatyka, drugi rok</p>
+        </div>
+        <div class="education-item">
+            <h3>Technikum Informatyczne 2019 - 2023</h3>
+            <p>Zespół Szkół nr 1 im. Stefana Roweckiego "Grota", Zambrów</p>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Zainteresowania -->
+<section class="card" data-aos="fade-up" id="zainteresowania">
+    <h2>Zainteresowania</h2>
+    <div class="interests-grid">
+        <div class="interest-item"><i class="fas fa-robot"></i> AI</div>
+        <div class="interest-item"><i class="fas fa-laptop-code"></i> Programowanie</div>
+        <div class="interest-item"><i class="fas fa-film"></i> Kinematografia</div>
+        <div class="interest-item"><i class="fas fa-book"></i> Czytanie</div>
+    </div>
+</section>
+
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

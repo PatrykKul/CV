@@ -1,0 +1,189 @@
+:root {
+    --primary-color: #2A2A2A;
+    --secondary-color: #FF6B6B;
+    --accent-color: #4ECDC4;
+    --text-color: #333;
+    --bg-color: #F9F9F9;
+    --card-bg: #FFFFFF;
+    --transition: all 0.3s ease-in-out;
+}
+
+[data-theme="dark"] {
+    --primary-color: #2A2A2A;
+    --text-color: #EEE;
+    --bg-color: #1A1A1A;
+    --card-bg: #2A2A2A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--card-bg);
+    color: var(--text-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header .contact-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.header .contact-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.header .contact-links a:hover {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 0.5rem;
+}
+
+.download-cv {
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Sekcja hero z efektem parallax */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+    background-attachment: fixed;
+}
+
+.hero h1 { font-size: 3.5rem; color: white; }
+.hero p { font-size: 1.5rem; color: #eee; }
+
+.main-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Dane osobowe */
+.personal-info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--secondary-color);
+}
+
+/* Gridy dla sekcji */
+.skills-grid, .certificates-grid, .interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.skill-item, .cert-item, .interest-item {
+    padding: 1rem;
+    background: var(--bg-color);
+    border-radius: 10px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+/* Timeline (Doświadczenie) */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline-item {
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background: var(--bg-color);
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Edukacja/Wykształcenie */
+.education-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.education-item {
+    padding: 1rem;
+    background: var(--bg-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Hover i mikrointerakcje */
+.timeline-item:hover,
+.skill-item:hover,
+.cert-item:hover,
+.interest-item:hover,
+.education-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .main-container { padding: 1rem; }
+    .header { flex-direction: column; gap: 10px; text-align: center; }
+}
